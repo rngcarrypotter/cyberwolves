@@ -14,7 +14,7 @@ body {
 
 header {
     width: 100%;
-    height: 188px; /* Adjust height to 75% of original */
+    height: 188px; /* Adjust height to 75% of original 250px */
     position: relative;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Add shadow for better depth */
 }
@@ -23,10 +23,7 @@ header {
     background: url('banner.png') no-repeat center center;
     background-size: cover; /* Ensure the entire image fits within the banner */
     height: 100%;
-    position: absolute; /* Position absolute within the header */
-    width: 100%;
-    top: 0;
-    left: 0;
+    width: 100%; /* Make sure the banner spans the full width */
 }
 
 .navbar {
@@ -74,7 +71,7 @@ main {
     text-align: center;
     padding: 100px 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Add shadow for better depth */
-    margin-top: -20px; /* Negative margin to remove extra space */
+    margin-top: -40px; /* Negative margin to remove extra space */
 }
 
 .hero-text h1 {
