@@ -30,9 +30,9 @@ header {
 
 .navbar {
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background to improve readability */
+    background-color: rgba(0, 0, 0, 0.85); /* Slightly darker for better visibility */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Add shadow for better depth */
-    padding: 10px 0; /* Add padding to navbar */
+    padding: 20px 0; /* Add padding to navbar */
     position: relative; /* Ensure navbar is below the header */
     z-index: 1000;
 }
@@ -46,15 +46,16 @@ nav ul {
 }
 
 nav ul li {
-    margin: 0 15px;
+    margin: 0 20px; /* Increase spacing between menu items */
 }
 
 nav ul li a {
     color: #ffffff; /* White text color */
     text-decoration: none;
     font-weight: bold;
-    padding: 10px 15px; /* Increased padding for better spacing */
+    padding: 15px 20px; /* Increased padding for better spacing */
     border-radius: 5px;
+    font-size: 1.1em; /* Increase font size for better visibility */
     transition: background 0.3s, transform 0.3s; /* Smooth transition effects */
 }
 
@@ -64,7 +65,7 @@ nav ul li a:hover {
 }
 
 main {
-    padding-top: 20px; /* Adjust based on new header height */
+    padding-top: 40px; /* Increase padding-top to create more space below the navbar */
 }
 
 .hero {
