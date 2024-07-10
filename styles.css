@@ -62,7 +62,7 @@ nav ul li a:hover {
 }
 
 main {
-    padding-top: 5px; /* Adjust based on new header height */
+    padding-top: 60px; /* Adjust based on new header height */
 }
 
 .hero {
