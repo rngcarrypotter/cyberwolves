@@ -17,7 +17,6 @@ header {
     height: 250px; /* Adjust height to match the image */
     position: relative;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Add shadow for better depth */
-    overflow: hidden; /* Ensure any overflow is hidden */
 }
 
 .banner {
@@ -25,9 +24,7 @@ header {
     background-size: cover; /* Ensure the entire image fits within the banner */
     height: 100%;
     width: 100%; /* Make sure the banner spans the full width */
-    position: absolute; /* Ensure the banner is positioned absolutely */
-    top: 0;
-    left: 0;
+    position: relative;
 }
 
 .navbar {
@@ -35,7 +32,6 @@ header {
     bottom: 0; /* Align to the bottom of the banner */
     width: 100%;
     background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background to improve readability */
-    z-index: 1000;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Add shadow for better depth */
 }
 
@@ -66,7 +62,7 @@ nav ul li a:hover {
 }
 
 main {
-    padding-top: 20px; /* Reduce padding-top to bring the content closer */
+    margin-top: -20px; /* Reduce space between header and main content */
 }
 
 .hero {
