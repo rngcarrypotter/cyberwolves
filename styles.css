@@ -29,12 +29,12 @@ header {
 }
 
 .navbar {
-    position: absolute; /* Position navbar within the banner */
-    bottom: 0; /* Align to the bottom of the banner */
     width: 100%;
     background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background to improve readability */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Add shadow for better depth */
     padding: 10px 0; /* Add padding to navbar */
+    position: relative; /* Ensure navbar is below the header */
+    z-index: 1000;
 }
 
 nav ul {
@@ -245,10 +245,6 @@ footer p {
 @media (min-width: 1024px) {
     header {
         height: 350px; /* Increase height for larger screens */
-    }
-
-    .navbar {
-        bottom: 20px; /* Adjust position for larger screens */
     }
 
     .hero {
