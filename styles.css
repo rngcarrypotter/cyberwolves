@@ -17,6 +17,7 @@ header {
     height: 250px; /* Adjust height to match the image */
     position: relative;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Add shadow for better depth */
+    overflow: hidden; /* Ensure any overflow is hidden */
 }
 
 .banner {
@@ -25,6 +26,8 @@ header {
     height: 100%;
     width: 100%; /* Make sure the banner spans the full width */
     position: absolute; /* Ensure the banner is positioned absolutely */
+    top: 0;
+    left: 0;
 }
 
 .navbar {
@@ -63,16 +66,15 @@ nav ul li a:hover {
 }
 
 main {
-    padding-top: 260px; /* Adjust based on new header height */
+    padding-top: 20px; /* Reduce padding-top to bring the content closer */
 }
 
 .hero {
     background: #121212; /* Match background to remove darker space */
     color: white;
     text-align: center;
-    padding: 5px;
+    padding: 20px; /* Adjusted padding */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Add shadow for better depth */
-    margin-top: -50px; /* Negative margin to remove extra space */
 }
 
 .hero-text h1 {
