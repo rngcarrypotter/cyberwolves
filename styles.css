@@ -71,7 +71,7 @@ main {
     text-align: center;
     padding: 100px 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Add shadow for better depth */
-    margin-top: -40px; /* Negative margin to remove extra space */
+    margin-top: -60px; /* Negative margin to remove extra space */
 }
 
 .hero-text h1 {
