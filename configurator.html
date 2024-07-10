@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced PC Configurator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="banner"></div>
+    </header>
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="configurator.html">Configurator</a></li>
+            <li><a href="#">PC & Phone Repair</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section class="configurator">
+            <div class="container">
+                <h2>Advanced PC Configurator</h2>
+                <div class="configurator-ui">
+                    <!-- CPU Brand and Model -->
+                    <div class="component-selector">
+                        <label for="cpu-brand">CPU Brand:</label>
+                        <select id="cpu-brand">
+                            <option value="intel">Intel</option>
+                            <option value="amd">AMD</option>
+                        </select>
+                    </div>
+                    <div class="component-selector">
+                        <label for="cpu-model">CPU Model:</label>
+                        <select id="cpu-model">
+                            <!-- Models will be populated dynamically from a database -->
+                        </select>
+                    </div>
+                    
+                    <!-- GPU Brand and Model -->
+                    <div class="component-selector">
+                        <label for="gpu-brand">GPU Brand:</label>
+                        <select id="gpu-brand">
+                            <option value="nvidia">NVIDIA</option>
+                            <option value="amd">AMD</option>
+                        </select>
+                    </div>
+                    <div class="component-selector">
+                        <label for="gpu-model">GPU Model:</label>
+                        <select id="gpu-model">
+                            <!-- Models will be populated dynamically from a database -->
+                        </select>
+                    </div>
+                    
+                    <!-- Multiple GPUs Option -->
+                    <div class="component-selector">
+                        <label for="multi-gpu">Multiple GPUs:</label>
+                        <select id="multi-gpu">
+                            <option value="single">Single GPU</option>
+                            <option value="dual">Dual GPU</option>
+                            <option value="triple">Triple GPU</option>
+                        </select>
+                    </div>
+                    
+                    <!-- Motherboard Brand and Model -->
+                    <div class="component-selector">
+                        <label for="motherboard-brand">Motherboard Brand:</label>
+                        <select id="motherboard-brand">
+                            <option value="asus">ASUS</option>
+                            <option value="msi">MSI</option>
+                            <option value="gigabyte">Gigabyte</option>
+                            <option value="asrock">ASRock</option>
+                        </select>
+                    </div>
+                    <div class="component-selector">
+                        <label for="motherboard-model">Motherboard Model:</label>
+                        <select id="motherboard-model">
+                            <!-- Models will be populated dynamically from a database -->
+                        </select>
+                    </div>
+                    
+                    <!-- RAM, Storage, and PSU -->
+                    <div class="component-selector">
+                        <label for="ram">RAM:</label>
+                        <select id="ram">
+                            <option value="8gb">8 GB</option>
+                            <option value="16gb">16 GB</option>
+                            <option value="32gb">32 GB</option>
+                            <option value="64gb">64 GB</option>
+                            <option value="128gb">128 GB</option>
+                        </select>
+                    </div>
+                    <div class="component-selector">
+                        <label for="storage">Storage:</label>
+                        <select id="storage">
+                            <option value="256gb">256 GB SSD</option>
+                            <option value="512gb">512 GB SSD</option>
+                            <option value="1tb">1 TB SSD</option>
+                            <option value="2tb">2 TB SSD</option>
+                            <option value="4tb">4 TB SSD</option>
+                        </select>
+                    </div>
+                    <div class="component-selector">
+                        <label for="psu">Power Supply Unit:</label>
+                        <select id="psu">
+                            <option value="500w">500W</option>
+                            <option value="750w">750W</option>
+                            <option value="1000w">1000W</option>
+                            <option value="1200w">1200W</option>
+                        </select>
+                    </div>
+                    
+                    <!-- Cooling and Case -->
+                    <div class="component-selector">
+                        <label for="cooling">Cooling:</label>
+                        <select id="cooling">
+                            <option value="air">Air Cooling</option>
+                            <option value="liquid">Liquid Cooling</option>
+                        </select>
+                    </div>
+                    <div class="component-selector">
+                        <label for="case-brand">Case Brand:</label>
+                        <select id="case-brand">
+                            <option value="nzxt">NZXT</option>
+                            <option value="corsair">Corsair</option>
+                            <option value="coolermaster">Cooler Master</option>
+                            <option value="fractal">Fractal Design</option>
+                        </select>
+                    </div>
+                    <div class="component-selector">
+                        <label for="case-model">Case Model:</label>
+                        <select id="case-model">
+                            <!-- Models will be populated dynamically from a database -->
+                        </select>
+                    </div>
+                    
+                    <!-- RGB Lighting -->
+                    <div class="component-selector">
+                        <label for="rgb">RGB Lighting:</label>
+                        <select id="rgb">
+                            <option value="none">None</option>
+                            <option value="single-color">Single Color</option>
+                            <option value="multi-color">Multi-Color</option>
+                            <option value="addressable">Addressable RGB</option>
+                        </select>
+                    </div>
+                    
+                    <!-- Operating System -->
+                    <div class="component-selector">
+                        <label for="os">Operating System:</label>
+                        <select id="os">
+                            <option value="windows">Windows 10</option>
+                            <option value="windows11">Windows 11</option>
+                            <option value="linux">Linux</option>
+                        </select>
+                    </div>
+                    
+                    <!-- Optical Drives and Sound Cards -->
+                    <div class="component-selector">
+                        <label for="optical-drive">Optical Drive:</label>
+                        <select id="optical-drive">
+                            <option value="none">None</option>
+                            <option value="dvd">DVD Drive</option>
+                            <option value="blu-ray">Blu-Ray Drive</option>
+                        </select>
+                    </div>
+                    <div class="component-selector">
+                        <label for="sound-card">Sound Card:</label>
+                        <select id="sound-card">
+                            <option value="none">None</option>
+                            <option value="basic">Basic Sound Card</option>
+                            <option value="advanced">Advanced Sound Card</option>
+                        </select>
+                    </div>
+                    
+                    <!-- Software Options -->
+                    <div class="component-selector">
+                        <label for="software">Software Options:</label>
+                        <select id="software" multiple>
+                            <option value="norton">Norton Antivirus</option>
+                            <option value="microsoft365">Microsoft 365</option>
+                            <option value="adobe">Adobe Creative Suite</option>
+                            <option value="autocad">AutoCAD</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 PC Assembly and Configuration. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
