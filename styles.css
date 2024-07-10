@@ -237,3 +237,18 @@ footer .container {
 footer p {
     margin: 0;
 }
+
+/* Media query for larger screens */
+@media (min-width: 1024px) {
+    header {
+        height: 350px; /* Increase height for larger screens */
+    }
+
+    .navbar {
+        bottom: 20px; /* Adjust position for larger screens */
+    }
+
+    .hero {
+        margin-top: -100px; /* Reduce spacing for larger screens */
+    }
+}
