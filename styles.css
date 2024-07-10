@@ -14,19 +14,18 @@ body {
 
 header {
     width: 100%;
-    position: fixed;
-    top: 0;
-    z-index: 1000;
-    background: url('banner.png') no-repeat center center/cover;
     height: 250px; /* Adjust height to fit the banner */
+    background: url('banner.png') no-repeat center center/cover;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Add shadow for better depth */
 }
 
-.banner {
-    display: flex;
-    justify-content: center;
-    align-items: flex-end; /* Align items to the bottom to better integrate with the design */
-    height: 100%;
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background to improve readability */
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Add shadow for better depth */
 }
 
 nav ul {
@@ -34,8 +33,6 @@ nav ul {
     display: flex;
     margin: 0;
     padding: 10px 0;
-    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background to improve readability */
-    width: 100%;
     justify-content: center;
 }
 
