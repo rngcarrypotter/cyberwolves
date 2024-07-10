@@ -65,7 +65,7 @@ nav ul li a:hover {
 }
 
 main {
-    padding-top: 40px; /* Increase padding-top to create more space below the navbar */
+    padding-top: 60px; /* Increase padding-top to create more space below the navbar */
 }
 
 .hero {
@@ -111,6 +111,7 @@ main {
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Add shadow for better depth */
     margin-top: 20px;
+    text-align: center; /* Center align for better layout */
 }
 
 .configurator h2 {
