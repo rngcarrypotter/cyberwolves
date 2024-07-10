@@ -14,7 +14,7 @@ body {
 
 header {
     width: 100%;
-    height: 188px; /* Adjust height to 75% of original 250px */
+    height: 188px; /* Adjust height to 75% of original */
     position: relative;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Add shadow for better depth */
 }
