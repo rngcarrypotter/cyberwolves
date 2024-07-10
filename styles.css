@@ -22,7 +22,7 @@ header {
 
 .banner {
     background: url('banner.jpg') no-repeat center center;
-    background-size: cover; /* Ensure the entire image fits within the banner */
+    background-size: 100% auto; /* Adjust to fit the width while maintaining aspect ratio */
     height: 100%;
     width: 100%; /* Make sure the banner spans the full width */
     position: relative;
@@ -252,6 +252,17 @@ footer p {
     }
 
     .hero {
-        margin-top: 0; /* Reduce spacing for larger screens */
+        margin-top: -20px; /* Reduce spacing for larger screens */
+    }
+}
+
+/* Media query for very wide screens */
+@media (min-width: 1600px) {
+    .banner {
+        background-size: contain; /* Ensure the entire image is visible */
+    }
+
+    .hero {
+        margin-top: 0; /* Adjust margin for very wide screens */
     }
 }
