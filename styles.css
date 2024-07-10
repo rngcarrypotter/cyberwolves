@@ -17,6 +17,7 @@ header {
     height: 250px; /* Adjust height to match the image */
     position: relative;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Add shadow for better depth */
+    overflow: hidden; /* Ensure any overflow is hidden */
 }
 
 .banner {
@@ -33,13 +34,14 @@ header {
     width: 100%;
     background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background to improve readability */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Add shadow for better depth */
+    padding: 10px 0; /* Add padding to navbar */
 }
 
 nav ul {
     list-style: none;
     display: flex;
     margin: 0;
-    padding: 10px 0;
+    padding: 0; /* Remove extra padding */
     justify-content: center;
 }
 
@@ -62,20 +64,21 @@ nav ul li a:hover {
 }
 
 main {
-    margin-top: -20px; /* Reduce space between header and main content */
+    padding-top: 20px; /* Adjust based on new header height */
 }
 
 .hero {
     background: #121212; /* Match background to remove darker space */
     color: white;
     text-align: center;
-    padding: 20px; /* Adjusted padding */
+    padding: 25px 20px; /* Adjusted padding */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Add shadow for better depth */
 }
 
 .hero-text h1 {
     font-size: 3em;
     margin: 0;
+    padding-top: 5px; /* Move text down by 5px */
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Text shadow for better readability */
 }
 
@@ -249,6 +252,6 @@ footer p {
     }
 
     .hero {
-        margin-top: -100px; /* Reduce spacing for larger screens */
+        margin-top: 0; /* Reduce spacing for larger screens */
     }
 }
