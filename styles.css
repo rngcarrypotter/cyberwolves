@@ -20,7 +20,7 @@ header {
 }
 
 .banner {
-    background: url('banner.png') no-repeat center center;
+    background: url('banner.jpg') no-repeat center center;
     background-size: cover; /* Ensure the entire image fits within the banner */
     height: 100%;
     width: 100%; /* Make sure the banner spans the full width */
