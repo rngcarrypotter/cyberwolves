@@ -12,8 +12,9 @@
     </header>
     <nav class="navbar">
         <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Configurator</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="configurator.html">Configurator</a></li>
+            <li><a href="#">PC & Phone Repair</a></li>
             <li><a href="#">About</a></li>
             <li><a href="#">Contact</a></li>
         </ul>
@@ -33,15 +34,17 @@
                     <div class="component-selector">
                         <label for="cpu">CPU:</label>
                         <select id="cpu">
-                            <option value="intel">Intel</option>
-                            <option value="amd">AMD</option>
+                            <option value="high-end">High-end</option>
+                            <option value="medium">Medium range</option>
+                            <option value="budget">Budget</option>
                         </select>
                     </div>
                     <div class="component-selector">
                         <label for="gpu">GPU:</label>
                         <select id="gpu">
-                            <option value="nvidia">NVIDIA</option>
-                            <option value="amd">AMD</option>
+                            <option value="high-end">High-end</option>
+                            <option value="medium">Medium range</option>
+                            <option value="budget">Budget</option>
                         </select>
                     </div>
                     <div class="component-selector">
@@ -67,10 +70,9 @@
                     <div class="component-selector">
                         <label for="motherboard">Motherboard:</label>
                         <select id="motherboard">
-                            <option value="asus">ASUS</option>
-                            <option value="msi">MSI</option>
-                            <option value="gigabyte">Gigabyte</option>
-                            <option value="asrock">ASRock</option>
+                            <option value="high-end">High-end</option>
+                            <option value="medium">Medium range</option>
+                            <option value="budget">Budget</option>
                         </select>
                     </div>
                     <div class="component-selector">
@@ -113,7 +115,7 @@
                 <div class="configurator-summary">
                     <h3>Summary</h3>
                     <ul>
-                        <li><strong>CPU:</strong> Intel</li>
+                        <li><strong>CPU:</strong> High-end</li>
                         <li><strong>GPU:</strong> NVIDIA</li>
                         <li><strong>RAM:</strong> 16 GB</li>
                         <li><strong>Storage:</strong> 512 GB SSD</li>
@@ -125,6 +127,7 @@
                     </ul>
                     <button class="cta-button">Save Configuration</button>
                 </div>
+                <button class="cta-button" onclick="location.href='configurator.html'">More Advanced Configuration</button>
             </div>
         </section>
     </main>
