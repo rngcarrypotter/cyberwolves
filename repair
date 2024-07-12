@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PC & Phone Repair Services</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="banner"></div>
+    </header>
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="configurator.html">Configurator</a></li>
+            <li><a href="repair.html">PC & Phone Repair</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section class="hero">
+            <div class="hero-text">
+                <h1>PC & Smartphone Repair Services</h1>
+                <p>Get your devices repaired quickly and professionally. We offer a wide range of repair services for PCs, laptops, tablets, and smartphones.</p>
+            </div>
+        </section>
+        <section class="repair-services">
+            <div class="container">
+                <h2>Our Repair Services</h2>
+                <div class="service-list">
+                    <div class="service-item">
+                        <h3>PC Repair</h3>
+                        <ul>
+                            <li>Free Diagnostics</li>
+                            <li>Screen Replacement - 120 CHF</li>
+                            <li>Battery Replacement - 70 CHF</li>
+                            <li>Hard Drive Replacement - 90 CHF</li>
+                            <li>SSD Upgrade - 140 CHF</li>
+                            <li>RAM Upgrade - 70 CHF</li>
+                            <li>Motherboard Replacement - 190 CHF</li>
+                            <li>Virus Removal - 90 CHF</li>
+                            <li>Data Recovery - 140 CHF</li>
+                            <li>OS Reinstallation - 90 CHF</li>
+                        </ul>
+                    </div>
+                    <div class="service-item">
+                        <h3>Smartphone Repair</h3>
+                        <ul>
+                            <li>Free Diagnostics</li>
+                            <li>Screen Replacement - 120 CHF</li>
+                            <li>Battery Replacement - 70 CHF</li>
+                            <li>Charging Port Repair - 80 CHF</li>
+                            <li>Water Damage Repair - 90 CHF</li>
+                            <li>Camera Repair - 60 CHF</li>
+                            <li>Speaker Replacement - 50 CHF</li>
+                            <li>Microphone Repair - 50 CHF</li>
+                            <li>Back Glass Replacement - 90 CHF</li>
+                        </ul>
+                    </div>
+                    <div class="service-item">
+                        <h3>Tablet Repair</h3>
+                        <ul>
+                            <li>Free Diagnostics</li>
+                            <li>Screen Replacement - 140 CHF</li>
+                            <li>Battery Replacement - 80 CHF</li>
+                            <li>Charging Port Repair - 90 CHF</li>
+                            <li>Water Damage Repair - 110 CHF</li>
+                            <li>Camera Repair - 70 CHF</li>
+                            <li>Speaker Replacement - 60 CHF</li>
+                        </ul>
+                    </div>
+                    <div class="service-item">
+                        <h3>Other Services</h3>
+                        <ul>
+                            <li>Software Installation - 40 CHF</li>
+                            <li>Network Setup - 120 CHF</li>
+                            <li>Home Theater Setup - 190 CHF</li>
+                            <li>Printer Setup & Troubleshooting - 50 CHF</li>
+                            <li>Data Transfer - 70 CHF</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="service-info">
+                    <h3>Why Choose Us?</h3>
+                    <ul>
+                        <li>Free, no-obligation diagnostics</li>
+                        <li>1 Year Warranty on all repairs</li>
+                        <li>Low Price Guarantee - We'll beat any local competitor's price by 5 CHF</li>
+                        <li>Quick Turnaround - Most repairs done in 45 minutes or less</li>
+                        <li>Certified Technicians</li>
+                        <li>Nationwide Support</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 PC Assembly and Configuration. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
