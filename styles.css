@@ -2,8 +2,8 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #121212;
-    color: #ffffff;
+    background-color: #121212; /* Dark background to match the banner's theme */
+    color: #ffffff; /* Light text color for better readability */
 }
 
 .container {
@@ -14,26 +14,26 @@ body {
 
 header {
     width: 100%;
-    height: 250px;
+    height: 250px; /* Adjust height to match the image */
     position: relative;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Add shadow for better depth */
+    overflow: hidden; /* Ensure any overflow is hidden */
 }
 
 .banner {
     background: url('banner.jpg') no-repeat center center;
-    background-size: 100% auto;
+    background-size: 100% auto; /* Adjust to fit the width while maintaining aspect ratio */
     height: 100%;
-    width: 100%;
+    width: 100%; /* Make sure the banner spans the full width */
     position: relative;
 }
 
 .navbar {
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.85);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-    padding: 20px 0;
-    position: relative;
+    background-color: rgba(0, 0, 0, 0.85); /* Slightly darker for better visibility */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Add shadow for better depth */
+    padding: 20px 0; /* Add padding to navbar */
+    position: relative; /* Ensure navbar is below the header */
     z-index: 1000;
 }
 
@@ -41,46 +41,46 @@ nav ul {
     list-style: none;
     display: flex;
     margin: 0;
-    padding: 0;
+    padding: 0; /* Remove extra padding */
     justify-content: center;
 }
 
 nav ul li {
-    margin: 0 20px;
+    margin: 0 20px; /* Increase spacing between menu items */
 }
 
 nav ul li a {
-    color: #ffffff;
+    color: #ffffff; /* White text color */
     text-decoration: none;
     font-weight: bold;
-    padding: 15px 20px;
+    padding: 15px 20px; /* Increased padding for better spacing */
     border-radius: 5px;
-    font-size: 1.1em;
-    transition: background 0.3s, transform 0.3s;
+    font-size: 1.1em; /* Increase font size for better visibility */
+    transition: background 0.3s, transform 0.3s; /* Smooth transition effects */
 }
 
 nav ul li a:hover {
-    background-color: rgba(255, 255, 255, 0.2);
-    transform: scale(1.1);
+    background-color: rgba(255, 255, 255, 0.2); /* Light hover effect */
+    transform: scale(1.1); /* Slight scale on hover */
 }
 
 main {
-    padding-top: 60px;
+    padding-top: 60px; /* Increase padding-top to create more space below the navbar */
 }
 
 .hero {
-    background: #121212;
+    background: #121212; /* Match background to remove darker space */
     color: white;
     text-align: center;
-    padding: 25px 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    padding: 25px 20px; /* Adjusted padding */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Add shadow for better depth */
 }
 
 .hero-text h1 {
     font-size: 3em;
     margin: 0;
-    padding-top: 5px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    padding-top: 5px; /* Move text down by 5px */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Text shadow for better readability */
 }
 
 .hero-text p {
@@ -97,7 +97,7 @@ main {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s, transform 0.3s;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for better depth */
 }
 
 .cta-button:hover {
@@ -106,19 +106,19 @@ main {
 }
 
 .configurator {
-    background-color: #1e1e1e;
+    background-color: #1e1e1e; /* Dark background to match theme */
     padding: 40px 20px;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Add shadow for better depth */
     margin-top: 20px;
-    text-align: center;
+    text-align: center; /* Center align for better layout */
 }
 
 .configurator h2 {
     font-size: 2em;
     margin-top: 0;
     text-align: center;
-    border-bottom: 2px solid #ffffff;
+    border-bottom: 2px solid #ffffff; /* White border for contrast */
     display: inline-block;
     padding-bottom: 10px;
     margin-bottom: 20px;
@@ -135,10 +135,10 @@ main {
 .component-selector {
     display: flex;
     flex-direction: column;
-    background-color: #2e2e2e;
+    background-color: #2e2e2e; /* Slightly lighter background for contrast */
     padding: 15px;
     border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Add shadow for better depth */
 }
 
 .component-selector label {
@@ -175,7 +175,7 @@ main {
     align-items: center;
     color: #888;
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Add shadow for better depth */
 }
 
 .configurator-summary {
@@ -183,16 +183,14 @@ main {
     background-color: #2e2e2e;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Add shadow for better depth */
+    text-align: left;
 }
 
 .configurator-summary h3 {
     font-size: 1.5em;
     margin-top: 0;
-    border-bottom: 2px solid #ffffff;
+    border-bottom: 2px solid #ffffff; /* White border for contrast */
     display: inline-block;
     padding-bottom: 10px;
     margin-bottom: 20px;
@@ -207,24 +205,20 @@ main {
 .configurator-summary ul li {
     font-size: 1em;
     margin-bottom: 10px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     padding: 10px;
     background-color: #1e1e1e;
     border-radius: 4px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Add shadow for better depth */
 }
 
 .configurator-summary ul li strong {
     font-weight: bold;
 }
 
-.configurator-summary .cta-button {
+.summary-buttons {
+    display: flex;
+    justify-content: space-between;
     margin-top: 20px;
-    width: 100%;
-    padding: 15px;
-    font-size: 1.2em;
 }
 
 footer {
@@ -250,22 +244,22 @@ footer p {
 /* Media query for larger screens */
 @media (min-width: 1024px) {
     header {
-        height: 350px;
+        height: 350px; /* Increase height for larger screens */
     }
 
     .hero {
-        margin-top: -20px;
+        margin-top: -20px; /* Reduce spacing for larger screens */
     }
 }
 
 /* Media query for very wide screens */
 @media (min-width: 1600px) {
     .banner {
-        background-size: contain;
+        background-size: contain; /* Ensure the entire image is visible */
     }
 
     .hero {
-        margin-top: 0;
+        margin-top: 0; /* Adjust margin for very wide screens */
     }
 }
 
@@ -303,6 +297,310 @@ footer p {
 }
 
 /* Media query for mobile devices */
+@mediaHere's the full CSS with the required adjustments:
+
+### `styles.css`
+
+```css
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #121212; /* Dark background to match the banner's theme */
+    color: #ffffff; /* Light text color for better readability */
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+header {
+    width: 100%;
+    height: 250px; /* Adjust height to match the image */
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Add shadow for better depth */
+    overflow: hidden; /* Ensure any overflow is hidden */
+}
+
+.banner {
+    background: url('banner.jpg') no-repeat center center;
+    background-size: 100% auto; /* Adjust to fit the width while maintaining aspect ratio */
+    height: 100%;
+    width: 100%; /* Make sure the banner spans the full width */
+    position: relative;
+}
+
+.navbar {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.85); /* Slightly darker for better visibility */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Add shadow for better depth */
+    padding: 20px 0; /* Add padding to navbar */
+    position: relative; /* Ensure navbar is below the header */
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0; /* Remove extra padding */
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 20px; /* Increase spacing between menu items */
+}
+
+nav ul li a {
+    color: #ffffff; /* White text color */
+    text-decoration: none;
+    font-weight: bold;
+    padding: 15px 20px; /* Increased padding for better spacing */
+    border-radius: 5px;
+    font-size: 1.1em; /* Increase font size for better visibility */
+    transition: background 0.3s, transform 0.3s; /* Smooth transition effects */
+}
+
+nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Light hover effect */
+    transform: scale(1.1); /* Slight scale on hover */
+}
+
+main {
+    padding-top: 60px; /* Increase padding-top to create more space below the navbar */
+}
+
+.hero {
+    background: #121212; /* Match background to remove darker space */
+    color: white;
+    text-align: center;
+    padding: 25px 20px; /* Adjusted padding */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Add shadow for better depth */
+}
+
+.hero-text h1 {
+    font-size: 3em;
+    margin: 0;
+    padding-top: 5px; /* Move text down by 5px */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Text shadow for better readability */
+}
+
+.hero-text p {
+    font-size: 1.5em;
+    margin: 10px 0 20px;
+}
+
+.cta-button {
+    padding: 15px 30px;
+    font-size: 1.2em;
+    color: #333;
+    background-color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for better depth */
+}
+
+.cta-button:hover {
+    background-color: #f0f0f0;
+    transform: scale(1.05);
+}
+
+.configurator {
+    background-color: #1e1e1e; /* Dark background to match theme */
+    padding: 40px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Add shadow for better depth */
+    margin-top: 20px;
+    text-align: center; /* Center align for better layout */
+}
+
+.configurator h2 {
+    font-size: 2em;
+    margin-top: 0;
+    text-align: center;
+    border-bottom: 2px solid #ffffff; /* White border for contrast */
+    display: inline-block;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.configurator-ui {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    justify-content: center;
+}
+
+.component-selector {
+    display: flex;
+    flex-direction: column;
+    background-color: #2e2e2e; /* Slightly lighter background for contrast */
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Add shadow for better depth */
+}
+
+.component-selector label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.component-selector select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+    color: #333;
+    background-color: #ffffff;
+}
+
+.pc-image {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.pc-image h3 {
+    font-size: 1.5em;
+    margin-top: 0;
+}
+
+.image-placeholder {
+    width: 100%;
+    height: 200px;
+    background-color: #2e2e2e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #888;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Add shadow for better depth */
+}
+
+.configurator-summary {
+    margin-top: 40px;
+    background-color: #2e2e2e;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Add shadow for better depth */
+    text-align: left;
+}
+
+.configurator-summary h3 {
+    font-size: 1.5em;
+    margin-top: 0;
+    border-bottom: 2px solid #ffffff; /* White border for contrast */
+    display: inline-block;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.configurator-summary ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.configurator-summary ul li {
+    font-size: 1em;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #1e1e1e;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Add shadow for better depth */
+}
+
+.configurator-summary ul li strong {
+    font-weight: bold;
+}
+
+.summary-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+footer .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Media query for larger screens */
+@media (min-width: 1024px) {
+    header {
+        height: 350px; /* Increase height for larger screens */
+    }
+
+    .hero {
+        margin-top: -20px; /* Reduce spacing for larger screens */
+    }
+}
+
+/* Media query for very wide screens */
+@media (min-width: 1600px) {
+    .banner {
+        background-size: contain; /* Ensure the entire image is visible */
+    }
+
+    .hero {
+        margin-top: 0; /* Adjust margin for very wide screens */
+    }
+}
+
+/* Media query for tablets */
+@media (max-width: 768px) {
+    .navbar ul {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .navbar ul li {
+        margin: 10px 0;
+    }
+
+    .hero-text h1 {
+        font-size: 2.5em;
+    }
+
+    .hero-text p {
+        font-size: 1.2em;
+    }
+
+    .cta-button {
+        padding: 10px 20px;
+        font-size: 1em;
+    }
+
+    .configurator h2 {
+        font-size: 1.5em;
+    }
+
+    .configurator-ui {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Media query for m/* Media query for mobile devices */
 @media (max-width: 480px) {
     .navbar ul {
         flex-direction: column;
@@ -346,4 +644,22 @@ footer p {
         padding: 8px;
         font-size: 0.9em;
     }
+
+    .configurator-summary h3 {
+        font-size: 1.2em;
+    }
+
+    .configurator-summary ul li {
+        font-size: 0.9em;
+    }
+
+    .summary-buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .summary-buttons .cta-button {
+        width: 100%;
+    }
 }
+mobile devices */
