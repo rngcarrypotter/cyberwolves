@@ -68,19 +68,19 @@
                         </select>
                     </div>
                 </div>
-                <div class="pc-image">
-                    <h3>Preview Your Build</h3>
-                    <div class="image-placeholder">Image of your configured PC will appear here</div>
-                </div>
                 <div class="configurator-summary">
                     <h3>Summary</h3>
                     <ul>
-                        <li><strong>CPU:</strong> High-End</li>
-                        <li><strong>GPU:</strong> High-End</li>
-                        <li><strong>RAM:</strong> 16 GB</li>
-                        <li><strong>Storage:</strong> 1 TB SSD</li>
+                        <li><strong>CPU:</strong> <span id="summary-cpu">High-End</span></li>
+                        <li><strong>GPU:</strong> <span id="summary-gpu">High-End</span></li>
+                        <li><strong>RAM:</strong> <span id="summary-ram">16 GB</span></li>
+                        <li><strong>Storage:</strong> <span id="summary-storage">1 TB SSD</span></li>
                     </ul>
                     <button class="cta-button">Save Configuration</button>
+                </div>
+                <div class="pc-image">
+                    <h3>Preview Your Build</h3>
+                    <img src="default-pc.jpg" alt="Custom PC" id="pc-preview" class="image-placeholder">
                 </div>
                 <button class="cta-button" onclick="location.href='configurator.html'">More Advanced Configuration</button>
             </div>
@@ -91,5 +91,42 @@
             <p>&copy; 2024 PC Assembly and Configuration. All rights reserved.</p>
         </div>
     </footer>
+    <script>
+        const cpuSelect = document.getElementById('cpu');
+        const gpuSelect = document.getElementById('gpu');
+        const ramSelect = document.getElementById('ram');
+        const storageSelect = document.getElementById('storage');
+        
+        const summaryCpu = document.getElementById('summary-cpu');
+        const summaryGpu = document.getElementById('summary-gpu');
+        const summaryRam = document.getElementById('summary-ram');
+        const summaryStorage = document.getElementById('summary-storage');
+        
+        const pcPreview = document.getElementById('pc-preview');
+        
+        function updateSummary() {
+            summaryCpu.textContent = cpuSelect.options[cpuSelect.selectedIndex].text;
+            summaryGpu.textContent = gpuSelect.options[gpuSelect.selectedIndex].text;
+            summaryRam.textContent = ramSelect.options[ramSelect.selectedIndex].text;
+            summaryStorage.textContent = storageSelect.options[storageSelect.selectedIndex].text;
+            
+            if (cpuSelect.value === 'high-end' && gpuSelect.value === 'high-end') {
+                pcPreview.src = 'high-end-pc.jpg';
+            } else if (cpuSelect.value === 'mid-range' && gpuSelect.value === 'mid-range') {
+                pcPreview.src = 'mid-range-pc.jpg';
+            } else if (cpuSelect.value === 'budget' && gpuSelect.value === 'budget') {
+                pcPreview.src = 'budget-pc.jpg';
+            } else {
+                pcPreview.src = 'default-pc.jpg';
+            }
+        }
+        
+        cpuSelect.addEventListener('change', updateSummary);
+        gpuSelect.addEventListener('change', updateSummary);
+        ramSelect.addEventListener('change', updateSummary);
+        storageSelect.addEventListener('change', updateSummary);
+        
+        updateSummary();
+    </script>
 </body>
 </html>
