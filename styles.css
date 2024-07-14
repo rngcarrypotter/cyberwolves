@@ -91,6 +91,7 @@ header .banner {
 .service-list, .configurator-ui {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center; /* Center items horizontally */
     gap: 20px;
 }
 
@@ -99,7 +100,9 @@ header .banner {
     padding: 15px;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-    flex: 1 1 calc(50% - 40px);
+    flex: 1 1 45%; /* Adjusted to take up more space */
+    max-width: 400px; /* Ensure max-width to prevent stretching too much */
+    box-sizing: border-box; /* Ensure padding is included in width */
 }
 
 .service-item h3, .component-selector label {
