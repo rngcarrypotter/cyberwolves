@@ -101,9 +101,8 @@ main {
 .configurator-ui {
     margin-top: 20px;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 40px;
-    justify-content: center;
+    grid-template-columns: 1fr;
+    gap: 20px;
 }
 
 .component-selector {
@@ -113,6 +112,10 @@ main {
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.component-selector.full-width {
+    width: 100%;
 }
 
 .component-selector label {
