@@ -70,7 +70,7 @@ header .banner {
     margin: 10px 0 20px;
 }
 
-.repair-services {
+.repair-services, .configurator {
     background: #1e1e1e;
     padding: 40px 20px;
     border-radius: 8px;
@@ -78,7 +78,7 @@ header .banner {
     margin-top: 20px;
 }
 
-.repair-services h2 {
+.repair-services h2, .configurator h2 {
     font-size: 2em;
     margin-top: 0;
     text-align: center;
@@ -88,13 +88,13 @@ header .banner {
     margin-bottom: 20px;
 }
 
-.service-list {
+.service-list, .configurator-ui {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
 }
 
-.service-item {
+.service-item, .component-selector {
     background-color: #2e2e2e;
     padding: 15px;
     border-radius: 5px;
@@ -102,7 +102,7 @@ header .banner {
     flex: 1 1 calc(50% - 40px);
 }
 
-.service-item h3 {
+.service-item h3, .component-selector label {
     font-size: 1.5em;
     margin-top: 0;
     border-bottom: 2px solid #ffffff;
@@ -111,13 +111,20 @@ header .banner {
     margin-bottom: 10px;
 }
 
-.service-item ul {
+.service-item ul, .component-selector select {
     list-style: none;
     padding: 0;
     margin: 0;
+    width: 100%;
+    color: #333;
+    background-color: #ffffff;
+    border-radius: 4px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    padding: 10px;
 }
 
-.service-item ul li {
+.service-item ul li, .component-selector select option {
     font-size: 1em;
     margin-bottom: 10px;
     padding: 5px 0;
@@ -149,4 +156,14 @@ footer {
     color: white;
     text-align: center;
     padding: 20px 0;
+}
+
+footer .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer p {
+    margin: 0;
 }
