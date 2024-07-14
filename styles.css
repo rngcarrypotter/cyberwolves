@@ -88,8 +88,18 @@ main {
     margin-bottom: 40px;
 }
 
+.configurator-section {
+    margin-bottom: 40px;
+}
+
+.configurator-section h3 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
 .configurator-ui {
-    margin-top: 40px;
+    margin-top: 20px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 40px;
