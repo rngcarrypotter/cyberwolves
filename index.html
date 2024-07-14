@@ -1,14 +1,15 @@
 <!DOCTYPE html>
-### `index.html`
-
-```html
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PC Assembly and Configuration</title>
     <link rel="stylesheet" href="styles.css">
+    <script>
+        function scrollToConfigurator() {
+            document.getElementById('base-models').scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
 </head>
 <body>
     <header>
@@ -28,65 +29,26 @@
             <div class="hero-text">
                 <h1>Build Your Perfect PC</h1>
                 <p>Select components and configure your dream PC with ease.</p>
-                <button class="cta-button">Get Started</button>
+                <button class="cta-button" onclick="scrollToConfigurator()">Get Started</button>
             </div>
         </section>
-        <section class="configurator">
+        <section id="base-models" class="base-models">
             <div class="container">
-                <h2>PC Configurator</h2>
-                <div class="configurator-ui">
-                    <div class="component-selector">
-                        <label for="cpu">CPU:</label>
-                        <select id="cpu">
-                            <option value="high-end">High-End</option>
-                            <option value="mid-range">Mid-Range</option>
-                            <option value="budget">Budget</option>
-                        </select>
+                <h2>Choose Your Base Model</h2>
+                <div class="model-options">
+                    <div class="model">
+                        <img src="high-end.jpg" alt="High-End Model">
+                        <button class="cta-button" onclick="location.href='configurator.html?model=high-end'">High-End</button>
                     </div>
-                    <div class="component-selector">
-                        <label for="gpu">GPU:</label>
-                        <select id="gpu">
-                            <option value="high-end">High-End</option>
-                            <option value="mid-range">Mid-Range</option>
-                            <option value="budget">Budget</option>
-                        </select>
+                    <div class="model">
+                        <img src="midrange.jpg" alt="Mid-Range Model">
+                        <button class="cta-button" onclick="location.href='configurator.html?model=mid-range'">Mid-Range</button>
                     </div>
-                    <div class="component-selector">
-                        <label for="ram">RAM:</label>
-                        <select id="ram">
-                            <option value="8gb">8 GB</option>
-                            <option value="16gb">16 GB</option>
-                            <option value="32gb">32 GB</option>
-                            <option value="64gb">64 GB</option>
-                            <option value="128gb">128 GB</option>
-                        </select>
-                    </div>
-                    <div class="component-selector">
-                        <label for="storage">Storage:</label>
-                        <select id="storage">
-                            <option value="256gb">256 GB SSD</option>
-                            <option value="512gb">512 GB SSD</option>
-                            <option value="1tb">1 TB SSD</option>
-                            <option value="2tb">2 TB SSD</option>
-                            <option value="4tb">4 TB SSD</option>
-                        </select>
+                    <div class="model">
+                        <img src="budget.jpg" alt="Budget Model">
+                        <button class="cta-button" onclick="location.href='configurator.html?model=budget'">Budget</button>
                     </div>
                 </div>
-                <div class="pc-image">
-                    <h3>Preview Your Build</h3>
-                    <div class="image-placeholder">Image of your configured PC will appear here</div>
-                </div>
-                <div class="configurator-summary">
-                    <h3>Summary</h3>
-                    <ul>
-                        <li><strong>CPU:</strong> High-End</li>
-                        <li><strong>GPU:</strong> High-End</li>
-                        <li><strong>RAM:</strong> 16 GB</li>
-                        <li><strong>Storage:</strong> 1 TB SSD</li>
-                    </ul>
-                    <button class="cta-button">Save Configuration</button>
-                </div>
-                <button class="cta-button" onclick="location.href='configurator.html'">More Advanced Configuration</button>
             </div>
         </section>
     </main>
