@@ -1,371 +1,164 @@
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #121212;
-    color: #ffffff;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PC Assembly and Configuration</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="banner"></div>
+    </header>
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="configurator.html">Configurator</a></li>
+            <li><a href="repair.html">PC & Phone Repair</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="user-auth-buttons">
+        <button id="login-button" class="auth-button">Login</button>
+        <button id="register-button" class="auth-button">Register</button>
+        <button id="cart-button" class="cart-button">Cart (<span id="cart-count">0</span>)</button>
+    </div>
+    <main>
+        <section class="hero">
+            <div class="hero-text">
+                <h1>Build Your Perfect PC</h1>
+                <p>Select components and configure your dream PC with ease.</p>
+                <button class="cta-button">Get Started</button>
+            </div>
+        </section>
+        <section class="configurator">
+            <div class="container">
+                <h2>PC Configurator</h2>
+                <div class="configurator-ui">
+                    <div class="component-selector">
+                        <label for="cpu">CPU:</label>
+                        <select id="cpu">
+                            <option value="high-end">High-End</option>
+                            <option value="mid-range">Mid-Range</option>
+                            <option value="budget">Budget</option>
+                        </select>
+                    </div>
+                    <div class="component-selector">
+                        <label for="gpu">GPU:</label>
+                        <select id="gpu">
+                            <option value="high-end">High-End</option>
+                            <option value="mid-range">Mid-Range</option>
+                            <option value="budget">Budget</option>
+                        </select>
+                    </div>
+                    <div class="component-selector">
+                        <label for="ram">RAM:</label>
+                        <select id="ram">
+                            <option value="8gb">8 GB</option>
+                            <option value="16gb">16 GB</option>
+                            <option value="32gb">32 GB</option>
+                            <option value="64gb">64 GB</option>
+                            <option value="128gb">128 GB</option>
+                        </select>
+                    </div>
+                    <div class="component-selector">
+                        <label for="storage">Storage:</label>
+                        <select id="storage">
+                            <option value="256gb">256 GB SSD</option>
+                            <option value="512gb">512 GB SSD</option>
+                            <option value="1tb">1 TB SSD</option>
+                            <option value="2tb">2 TB SSD</option>
+                            <option value="4tb">4 TB SSD</option>
+                        </select>
+                    </div>
+                    <div class="component-selector">
+                        <label for="psu">Power Supply Unit:</label>
+                        <select id="psu">
+                            <option value="500w">500W</option>
+                            <option value="750w">750W</option>
+                            <option value="1000w">1000W</option>
+                            <option value="1200w">1200W</option>
+                        </select>
+                    </div>
+                    <div class="component-selector">
+                        <label for="cooling">Cooling:</label>
+                        <select id="cooling">
+                            <option value="air">Air Cooling</option>
+                            <option value="liquid">Liquid Cooling</option>
+                        </select>
+                    </div>
+                    <div class="component-selector">
+                        <label for="case">Case:</label>
+                        <select id="case">
+                            <option value="mid">Mid Tower</option>
+                            <option value="full">Full Tower</option>
+                            <option value="mini">Mini Tower</option>
+                        </select>
+                    </div>
+                    <div class="component-selector">
+                        <label for="os">Operating System:</label>
+                        <select id="os">
+                            <option value="windows">Windows 10</option>
+                            <option value="windows11">Windows 11</option>
+                            <option value="linux">Linux</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="pc-image">
+                    <h3>Preview Your Build</h3>
+                    <div class="image-placeholder">Image of your configured PC will appear here</div>
+                </div>
+                <div class="configurator-summary">
+                    <h3>Summary</h3>
+                    <ul>
+                        <li><strong>CPU:</strong> Intel</li>
+                        <li><strong>GPU:</strong> NVIDIA</li>
+                        <li><strong>RAM:</strong> 16 GB</li>
+                        <li><strong>Storage:</strong> 512 GB SSD</li>
+                        <li><strong>Motherboard:</strong> MSI</li>
+                        <li><strong>PSU:</strong> 750W</li>
+                        <li><strong>Cooling:</strong> Liquid Cooling</li>
+                        <li><strong>Case:</strong> Mid Tower</li>
+                        <li><strong>OS:</strong> Windows 10</li>
+                    </ul>
+                    <button class="cta-button" onclick="addItemToCart({
+                        image: 'path/to/high-end-pc.jpg',
+                        name: 'High-End PC',
+                        description: 'A high-end custom-built gaming PC.',
+                        price: 1999.99
+                    })">Add to Cart</button>
+                    <button class="cta-button" onclick="location.href='configurator.html'">More Advanced Configuration</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 PC Assembly and Configuration. All rights reserved.</p>
+        </div>
+    </footer>
 
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-}
+    <!-- Cart Panel -->
+    <div id="cart-panel" class="cart-panel">
+        <div class="cart-panel-header">
+            <h2>Your Shopping Cart</h2>
+            <button id="close-cart-button" class="close-cart-button">&times;</button>
+        </div>
+        <div class="cart-items">
+            <!-- Items will be dynamically added here -->
+        </div>
+        <div class="cart-summary">
+            <h3>Cart Summary</h3>
+            <p>Items: <span id="item-count">0</span></p>
+            <p>Total: CHF <span id="total-price">0.00</span></p>
+            <button id="checkout-button" class="cta-button">Checkout</button>
+            <button id="guest-checkout-button" class="cta-button">Checkout as Guest</button>
+        </div>
+    </div>
+    <div id="cart-overlay" class="cart-overlay"></div>
 
-header {
-    width: 100%;
-    height: 250px;
-    position: relative;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-    overflow: hidden;
-}
-
-.banner {
-    background: url('banner.jpg') no-repeat center center;
-    background-size: 100% auto;
-    height: 100%;
-    width: 100%;
-    position: relative;
-}
-
-.navbar {
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.85);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-    padding: 20px 0;
-    position: relative;
-    z-index: 1000;
-}
-
-nav ul {
-    list-style: none;
-    display: flex;
-    margin: 0;
-    padding: 0;
-    justify-content: center;
-}
-
-nav ul li {
-    margin: 0 20px;
-}
-
-nav ul li a {
-    color: #ffffff;
-    text-decoration: none;
-    font-weight: bold;
-    padding: 15px 20px;
-    border-radius: 5px;
-    font-size: 1.1em;
-    transition: background 0.3s, transform 0.3s;
-}
-
-nav ul li a:hover {
-    background-color: rgba(255, 255, 255, 0.2);
-    transform: scale(1.1);
-}
-
-main {
-    padding-top: 60px;
-}
-
-.hero {
-    background: #121212;
-    color: white;
-    text-align: center;
-    padding: 25px 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-}
-
-.hero-text h1 {
-    font-size: 3em;
-    margin: 0;
-    padding-top: 5px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-}
-
-.hero-text p {
-    font-size: 1.5em;
-    margin: 10px 0 20px;
-}
-
-.cta-button {
-    padding: 15px 30px;
-    font-size: 1.2em;
-    color: #333;
-    background-color: #ffffff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.3s;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.cta-button:hover {
-    background-color: #f0f0f0;
-    transform: scale(1.05);
-}
-.configurator {
-    background-color: #1e1e1e;
-    padding: 40px 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-    margin-top: 20px;
-    text-align: center;
-}
-
-.configurator h2 {
-    font-size: 2em;
-    margin-top: 0;
-    text-align: center;
-    border-bottom: 2px solid #ffffff;
-    display: inline-block;
-    padding-bottom: 10px;
-    margin-bottom: 20px;
-}
-
-.configurator-ui {
-    margin-top: 20px;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
-    justify-content: center;
-}
-
-.component-selector {
-    display: flex;
-    flex-direction: column;
-    background-color: #2e2e2e;
-    padding: 15px;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-}
-
-.component-selector label {
-    margin-bottom: 5px;
-    font-weight: bold;
-    color: #ffffff;
-}
-
-.component-selector select {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 1em;
-    color: #333;
-    background-color: #ffffff;
-}
-
-.configurator-summary {
-    margin-top: 40px;
-    background-color: #2e2e2e;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-    text-align: left;
-}
-
-.configurator-summary h3 {
-    font-size: 1.5em;
-    margin-top: 0;
-    border-bottom: 2px solid #ffffff;
-    display: inline-block;
-    padding-bottom: 10px;
-    margin-bottom: 20px;
-}
-
-.configurator-summary ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.configurator-summary ul li {
-    font-size: 1em;
-    margin-bottom: 10px;
-    padding: 0;
-    color: #ffffff;
-}
-
-.configurator-summary ul li strong {
-    font-weight: bold;
-}
-
-.pc-image {
-    text-align: center;
-    margin: 20px 0;
-}
-
-.pc-image h3 {
-    font-size: 1.5em;
-    margin-top: 0;
-}
-
-.image-placeholder {
-    width: 100%;
-    height: auto;
-    max-height: 400px;
-    background-color: #2e2e2e;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #888;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-}
-
-.summary-buttons {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 20px;
-}
-
-.summary-buttons .cta-button {
-    width: 48%;
-}
-
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 20px 0;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-}
-
-footer .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-footer p {
-    margin: 0;
-}
-
-/* Media query for larger screens */
-@media (min-width: 1024px) {
-    header {
-        height: 350px;
-    }
-
-    .hero {
-        margin-top: -20px;
-    }
-}
-
-/* Media query for very wide screens */
-@media (min-width: 1600px) {
-    .banner {
-        background-size: contain;
-    }
-
-    .hero {
-        margin-top: 0;
-    }
-}
-
-/* Media query for tablets */
-@media (max-width: 768px) {
-    .navbar ul {
-        flex-direction: column;
-        padding: 0;
-    }
-
-    .navbar ul li {
-        margin: 10px 0;
-    }
-
-    .hero-text h1 {
-        font-size: 2.5em;
-    }
-
-    .hero-text p {
-        font-size: 1.2em;
-    }
-
-    .cta-button {
-        padding: 10px 20px;
-        font-size: 1em;
-    }
-
-    .configurator h2 {
-        font-size: 1.5em;
-    }
-
-    .configurator-ui {
-        grid-template-columns: 1fr;
-    }
-
-    .summary-buttons {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .summary-buttons .cta-button {
-        width: 100%;
-    }
-}
-
-/* Media query for mobile devices */
-@media (max-width: 480px) {
-    .navbar ul {
-        flex-direction: column;
-        padding: 0;
-    }
-
-    .navbar ul li {
-        margin: 10px 0;
-    }
-
-    .hero-text h1 {
-        font-size: 2em;
-    }
-
-    .hero-text p {
-        font-size: 1em;
-    }
-
-    .cta-button {
-        padding: 10px 20px;
-        font-size: 1em;
-    }
-
-    .configurator h2 {
-        font-size: 1.2em;
-    }
-
-    .configurator-ui {
-        grid-template-columns: 1fr;
-    }
-
-    .component-selector {
-        padding: 10px;
-    }
-
-    .component-selector label {
-        font-size: 1em;
-    }
-
-    .component-selector select {
-        padding: 8px;
-        font-size: 0.9em;
-    }
-
-    .configurator-summary h3 {
-        font-size: 1.2em;
-    }
-
-    .configurator-summary ul li {
-        font-size: 0.9em;
-    }
-
-    .summary-buttons {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .summary-buttons .cta-button {
-        width: 100%;
-    }
-}
+    <script src="cart.js"></script>
+    <script src="auth.js"></script>
+</body>
+</html>
