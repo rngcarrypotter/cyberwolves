@@ -12,56 +12,74 @@ body {
     margin: 0 auto;
 }
 
-header .banner {
+header {
+    width: 100%;
+    height: 250px;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+}
+
+.banner {
     background: url('banner.jpg') no-repeat center center;
     background-size: cover;
-    height: 200px;
+    height: 100%;
     width: 100%;
+    position: relative;
 }
 
 .navbar {
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.85);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    padding: 20px 0;
+    position: relative;
+    z-index: 1000;
 }
 
-.navbar ul {
+nav ul {
     list-style: none;
     display: flex;
     margin: 0;
-    padding: 10px 0;
+    padding: 0;
     justify-content: center;
 }
 
-.navbar ul li {
-    margin: 0 15px;
+nav ul li {
+    margin: 0 20px;
 }
 
-.navbar ul li a {
+nav ul li a {
     color: #ffffff;
     text-decoration: none;
     font-weight: bold;
-    padding: 10px 15px;
+    padding: 15px 20px;
     border-radius: 5px;
+    font-size: 1.1em;
     transition: background 0.3s, transform 0.3s;
 }
 
-.navbar ul li a:hover {
+nav ul li a:hover {
     background-color: rgba(255, 255, 255, 0.2);
     transform: scale(1.1);
+}
+
+main {
+    padding-top: 60px;
 }
 
 .hero {
     background: #121212;
     color: white;
     text-align: center;
-    padding: 20px;
+    padding: 25px 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
 
 .hero-text h1 {
     font-size: 3em;
     margin: 0;
+    padding-top: 5px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
@@ -70,15 +88,33 @@ header .banner {
     margin: 10px 0 20px;
 }
 
-.repair-services, .configurator {
-    background: #1e1e1e;
+.cta-button {
+    padding: 15px 30px;
+    font-size: 1.2em;
+    color: #333;
+    background-color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.cta-button:hover {
+    background-color: #f0f0f0;
+    transform: scale(1.05);
+}
+
+.configurator {
+    background-color: #1e1e1e;
     padding: 40px 20px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
     margin-top: 20px;
+    text-align: center;
 }
 
-.repair-services h2, .configurator h2 {
+.configurator h2 {
     font-size: 2em;
     margin-top: 0;
     text-align: center;
@@ -88,70 +124,104 @@ header .banner {
     margin-bottom: 20px;
 }
 
-.service-list, .configurator-ui {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center; /* Center items horizontally */
+.configurator-ui {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 20px;
+    justify-content: center;
 }
 
-.service-item, .component-selector {
+.component-selector {
+    display: flex;
+    flex-direction: column;
     background-color: #2e2e2e;
     padding: 15px;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-    flex: 1 1 45%; /* Adjusted to take up more space */
-    max-width: 400px; /* Ensure max-width to prevent stretching too much */
-    box-sizing: border-box; /* Ensure padding is included in width */
 }
 
-.service-item h3, .component-selector label {
+.component-selector label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.component-selector select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+    color: #333;
+    background-color: #ffffff;
+}
+
+.pc-image {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.pc-image h3 {
+    font-size: 1.5em;
+    margin-top: 0;
+}
+
+.image-placeholder {
+    width: 100%;
+    height: 200px;
+    background-color: #2e2e2e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #888;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.configurator-summary {
+    margin-top: 40px;
+    background-color: #2e2e2e;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.configurator-summary h3 {
     font-size: 1.5em;
     margin-top: 0;
     border-bottom: 2px solid #ffffff;
     display: inline-block;
     padding-bottom: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
-.service-item ul, .component-selector select {
+.configurator-summary ul {
     list-style: none;
     padding: 0;
     margin: 0;
-    width: 100%;
-    color: #333;
-    background-color: #ffffff;
-    border-radius: 4px;
+}
+
+.configurator-summary ul li {
     font-size: 1em;
-    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     padding: 10px;
+    background-color: #1e1e1e;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-.service-item ul li, .component-selector select option {
-    font-size: 1em;
-    margin-bottom: 10px;
-    padding: 5px 0;
+.configurator-summary ul li strong {
+    font-weight: bold;
 }
 
-.service-info {
+.configurator-summary .cta-button {
     margin-top: 20px;
-}
-
-.service-info h3 {
-    font-size: 1.5em;
-    margin-top: 0;
-}
-
-.service-info ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.service-info ul li {
-    font-size: 1em;
-    margin-bottom: 10px;
-    padding: 5px 0;
+    width: 100%;
+    padding: 15px;
+    font-size: 1.2em;
 }
 
 footer {
@@ -159,6 +229,9 @@ footer {
     color: white;
     text-align: center;
     padding: 20px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
 
 footer .container {
@@ -169,4 +242,105 @@ footer .container {
 
 footer p {
     margin: 0;
+}
+
+/* Media query for larger screens */
+@media (min-width: 1024px) {
+    header {
+        height: 350px;
+    }
+
+    .hero {
+        margin-top: -20px;
+    }
+}
+
+/* Media query for very wide screens */
+@media (min-width: 1600px) {
+    .banner {
+        background-size: contain;
+    }
+
+    .hero {
+        margin-top: 0;
+    }
+}
+
+/* Media query for tablets */
+@media (max-width: 768px) {
+    .navbar ul {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .navbar ul li {
+        margin: 10px 0;
+    }
+
+    .hero-text h1 {
+        font-size: 2.5em;
+    }
+
+    .hero-text p {
+        font-size: 1.2em;
+    }
+
+    .cta-button {
+        padding: 10px 20px;
+        font-size: 1em;
+    }
+
+    .configurator h2 {
+        font-size: 1.5em;
+    }
+
+    .configurator-ui {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Media query for mobile devices */
+@media (max-width: 480px) {
+    .navbar ul {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .navbar ul li {
+        margin: 10px 0;
+    }
+
+    .hero-text h1 {
+        font-size: 2em;
+    }
+
+    .hero-text p {
+        font-size: 1em;
+    }
+
+    .cta-button {
+        padding: 10px 20px;
+        font-size: 1em;
+    }
+
+    .configurator h2 {
+        font-size: 1.2em;
+    }
+
+    .configurator-ui {
+        grid-template-columns: 1fr;
+    }
+
+    .component-selector {
+        padding: 10px;
+    }
+
+    .component-selector label {
+        font-size: 1em;
+    }
+
+    .component-selector select {
+        padding: 8px;
+        font-size: 0.9em;
+    }
 }
