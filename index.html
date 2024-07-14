@@ -14,7 +14,7 @@
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="configurator.html">Configurator</a></li>
-            <li><a href="repair.html">Repair</a></li>
+            <li><a href="repair.html">PC & Phone Repair</a></li>
             <li><a href="#">About</a></li>
             <li><a href="#">Contact</a></li>
         </ul>
@@ -68,18 +68,23 @@
                         </select>
                     </div>
                 </div>
-                <div class="configurator-summary">
-                    <h3>Summary</h3>
-                    <ul>
-                        <li><strong>CPU:</strong> <span id="summary-cpu">High-End</span></li>
-                        <li><strong>GPU:</strong> <span id="summary-gpu">High-End</span></li>
-                        <li><strong>RAM:</strong> <span id="summary-ram">16 GB</span></li>
-                        <li><strong>Storage:</strong> <span id="summary-storage">1 TB SSD</span></li>
-                    </ul>
-                    <img src="default-pc.jpg" alt="Custom PC" id="pc-preview" class="image-placeholder">
-                    <div class="summary-buttons">
-                        <button class="cta-button">Add to Cart</button>
-                        <button class="cta-button" onclick="location.href='configurator.html'">Further Customization</button>
+                <div class="summary-and-preview">
+                    <div class="configurator-summary">
+                        <h3>Summary</h3>
+                        <ul>
+                            <li><strong>CPU:</strong> <span id="summary-cpu">High-End</span> <img src="cpu-placeholder.jpg" alt="CPU Image" id="cpu-img"></li>
+                            <li><strong>GPU:</strong> <span id="summary-gpu">High-End</span> <img src="gpu-placeholder.jpg" alt="GPU Image" id="gpu-img"></li>
+                            <li><strong>RAM:</strong> <span id="summary-ram">16 GB</span> <img src="ram-placeholder.jpg" alt="RAM Image" id="ram-img"></li>
+                            <li><strong>Storage:</strong> <span id="summary-storage">1 TB SSD</span> <img src="storage-placeholder.jpg" alt="Storage Image" id="storage-img"></li>
+                        </ul>
+                        <div class="summary-buttons">
+                            <button class="cta-button">Add to Cart</button>
+                            <button class="cta-button" onclick="location.href='configurator.html'">Further Customization</button>
+                        </div>
+                    </div>
+                    <div class="pc-image">
+                        <h3>Preview Your Build</h3>
+                        <img src="default-pc.jpg" alt="Custom PC" id="pc-preview" class="image-placeholder">
                     </div>
                 </div>
             </div>
@@ -101,6 +106,11 @@
         const summaryRam = document.getElementById('summary-ram');
         const summaryStorage = document.getElementById('summary-storage');
         
+        const cpuImg = document.getElementById('cpu-img');
+        const gpuImg = document.getElementById('gpu-img');
+        const ramImg = document.getElementById('ram-img');
+        const storageImg = document.getElementById('storage-img');
+        
         const pcPreview = document.getElementById('pc-preview');
         
         function updateSummary() {
@@ -111,12 +121,28 @@
             
             if (cpuSelect.value === 'high-end' && gpuSelect.value === 'high-end') {
                 pcPreview.src = 'high-end-pc.jpg';
+                cpuImg.src = 'high-end-cpu.jpg';
+                gpuImg.src = 'high-end-gpu.jpg';
+                ramImg.src = 'high-end-ram.jpg';
+                storageImg.src = 'high-end-storage.jpg';
             } else if (cpuSelect.value === 'mid-range' && gpuSelect.value === 'mid-range') {
                 pcPreview.src = 'mid-range-pc.jpg';
+                cpuImg.src = 'mid-range-cpu.jpg';
+                gpuImg.src = 'mid-range-gpu.jpg';
+                ramImg.src = 'mid-range-ram.jpg';
+                storageImg.src = 'mid-range-storage.jpg';
             } else if (cpuSelect.value === 'budget' && gpuSelect.value === 'budget') {
                 pcPreview.src = 'budget-pc.jpg';
+                cpuImg.src = 'budget-cpu.jpg';
+                gpuImg.src = 'budget-gpu.jpg';
+                ramImg.src = 'budget-ram.jpg';
+                storageImg.src = 'budget-storage.jpg';
             } else {
                 pcPreview.src = 'default-pc.jpg';
+                cpuImg.src = 'cpu-placeholder.jpg';
+                gpuImg.src = 'gpu-placeholder.jpg';
+                ramImg.src = 'ram-placeholder.jpg';
+                storageImg.src = 'storage-placeholder.jpg';
             }
         }
         
