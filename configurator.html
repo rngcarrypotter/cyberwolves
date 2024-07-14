@@ -23,181 +23,195 @@
         <section class="configurator full-page">
             <div class="container">
                 <h2>Advanced PC Configurator</h2>
-                <div class="configurator-ui">
-                    <!-- CPU Brand and Model -->
-                    <div class="component-selector">
-                        <label for="cpu-brand">CPU Brand:</label>
-                        <select id="cpu-brand">
-                            <option value="intel">Intel</option>
-                            <option value="amd">AMD</option>
-                        </select>
-                    </div>
-                    <div class="component-selector">
-                        <label for="cpu-model">CPU Model:</label>
-                        <select id="cpu-model">
-                            <option value="i5-12400">Intel Core i5-12400 - 200 CHF</option>
-                            <option value="i7-12700K">Intel Core i7-12700K - 350 CHF</option>
-                            <option value="r5-5600">AMD Ryzen 5 5600 - 180 CHF</option>
-                            <option value="r7-5700X">AMD Ryzen 7 5700X - 270 CHF</option>
-                        </select>
-                    </div>
-                    
-                    <!-- GPU Brand and Model -->
-                    <div class="component-selector">
-                        <label for="gpu-brand">GPU Brand:</label>
-                        <select id="gpu-brand">
-                            <option value="nvidia">NVIDIA</option>
-                            <option value="amd">AMD</option>
-                        </select>
-                    </div>
-                    <div class="component-selector">
-                        <label for="gpu-model">GPU Model:</label>
-                        <select id="gpu-model">
-                            <option value="rtx-3060">NVIDIA RTX 3060 - 350 CHF</option>
-                            <option value="rtx-4060">NVIDIA RTX 4060 - 500 CHF</option>
-                            <option value="rx-6650xt">AMD RX 6650 XT - 320 CHF</option>
-                            <option value="rx-7900xt">AMD RX 7900 XT - 900 CHF</option>
-                        </select>
-                    </div>
-                    
-                    <!-- Multiple GPUs Option -->
-                    <div class="component-selector">
-                        <label for="multi-gpu">Multiple GPUs:</label>
-                        <select id="multi-gpu">
-                            <option value="single">Single GPU</option>
-                            <option value="dual">Dual GPU</option>
-                            <option value="triple">Triple GPU</option>
-                        </select>
-                    </div>
-                    
-                    <!-- Motherboard Brand and Model -->
-                    <div class="component-selector">
-                        <label for="motherboard-brand">Motherboard Brand:</label>
-                        <select id="motherboard-brand">
-                            <option value="asus">ASUS</option>
-                            <option value="msi">MSI</option>
-                            <option value="gigabyte">Gigabyte</option>
-                            <option value="asrock">ASRock</option>
-                        </select>
-                    </div>
-                    <div class="component-selector">
-                        <label for="motherboard-model">Motherboard Model:</label>
-                        <select id="motherboard-model">
-                            <option value="asus-b550">ASUS B550 - 150 CHF</option>
-                            <option value="msi-x570">MSI X570 - 200 CHF</option>
-                            <option value="gigabyte-b650">Gigabyte B650 - 180 CHF</option>
-                            <option value="asrock-z690">ASRock Z690 - 220 CHF</option>
-                        </select>
-                    </div>
-                    
-                    <!-- RAM, Storage, and PSU -->
-                    <div class="component-selector">
-                        <label for="ram">RAM:</label>
-                        <select id="ram">
-                            <option value="8gb">8 GB - 40 CHF</option>
-                            <option value="16gb">16 GB - 70 CHF</option>
-                            <option value="32gb">32 GB - 130 CHF</option>
-                            <option value="64gb">64 GB - 250 CHF</option>
-                            <option value="128gb">128 GB - 500 CHF</option>
-                        </select>
-                    </div>
-                    <div class="component-selector">
-                        <label for="storage">Storage:</label>
-                        <select id="storage">
-                            <option value="256gb">256 GB SSD - 50 CHF</option>
-                            <option value="512gb">512 GB SSD - 80 CHF</option>
-                            <option value="1tb">1 TB SSD - 120 CHF</option>
-                            <option value="2tb">2 TB SSD - 200 CHF</option>
-                            <option value="4tb">4 TB SSD - 350 CHF</option>
-                        </select>
-                    </div>
-                    <div class="component-selector">
-                        <label for="psu">Power Supply Unit:</label>
-                        <select id="psu">
-                            <option value="500w">500W - 60 CHF</option>
-                            <option value="750w">750W - 90 CHF</option>
-                            <option value="1000w">1000W - 130 CHF</option>
-                            <option value="1200w">1200W - 180 CHF</option>
-                        </select>
-                    </div>
-                    
-                    <!-- Cooling and Case -->
-                    <div class="component-selector">
-                        <label for="cooling">Cooling:</label>
-                        <select id="cooling">
-                            <option value="air">Air Cooling - 50 CHF</option>
-                            <option value="liquid">Liquid Cooling - 150 CHF</option>
-                        </select>
-                    </div>
-                    <div class="component-selector">
-                        <label for="case-brand">Case Brand:</label>
-                        <select id="case-brand">
-                            <option value="nzxt">NZXT</option>
-                            <option value="corsair">Corsair</option>
-                            <option value="coolermaster">Cooler Master</option>
-                            <option value="fractal">Fractal Design</option>
-                        </select>
-                    </div>
-                    <div class="component-selector">
-                        <label for="case-model">Case Model:</label>
-                        <select id="case-model">
-                            <option value="nzxt-h510">NZXT H510 - 90 CHF</option>
-                            <option value="corsair-4000d">Corsair 4000D - 100 CHF</option>
-                            <option value="cm-mb520">Cooler Master MB520 - 85 CHF</option>
-                            <option value="fractal-meshify-c">Fractal Meshify C - 110 CHF</option>
-                        </select>
-                    </div>
-                    
-                    <!-- RGB Lighting -->
-                    <div class="component-selector">
-                        <label for="rgb">RGB Lighting:</label>
-                        <select id="rgb">
-                            <option value="none">None</option>
-                            <option value="single-color">Single Color - 30 CHF</option>
-                            <option value="multi-color">Multi-Color - 50 CHF</option>
-                            <option value="addressable">Addressable RGB - 80 CHF</option>
-                        </select>
-                    </div>
-                    
-                    <!-- Operating System -->
-                    <div class="component-selector">
-                        <label for="os">Operating System:</label>
-                        <select id="os">
-                            <option value="windows10">Windows 10 - 120 CHF</option>
-                            <option value="windows11">Windows 11 - 140 CHF</option>
-                            <option value="linux">Linux - Free</option>
-                        </select>
-                    </div>
-                    
-                    <!-- Optical Drives and Sound Cards -->
-                    <div class="component-selector">
-                        <label for="optical-drive">Optical Drive:</label>
-                        <select id="optical-drive">
-                            <option value="none">None</option>
-                            <option value="dvd">DVD Drive - 40 CHF</option>
-                            <option value="blu-ray">Blu-Ray Drive - 100 CHF</option>
-                        </select>
-                    </div>
-                    <div class="component-selector">
-                        <label for="sound-card">Sound Card:</label>
-                        <select id="sound-card">
-                            <option value="none">None</option>
-                            <option value="basic">Basic Sound Card - 30 CHF</option>
-                            <option value="advanced">Advanced Sound Card - 70 CHF</option>
-                        </select>
-                    </div>
-                    
-                    <!-- Software Options -->
-                    <div class="component-selector">
-                        <label for="software">Software Options:</label>
-                        <select id="software" multiple>
-                            <option value="norton">Norton Antivirus - 50 CHF</option>
-                            <option value="microsoft365">Microsoft 365 - 70 CHF</option>
-                            <option value="adobe">Adobe Creative Suite - 300 CHF</option>
-                            <option value="autocad">AutoCAD - 150 CHF</option>
-                        </select>
+                
+                <!-- CPU Section -->
+                <div class="configurator-section">
+                    <h3>CPU</h3>
+                    <div class="configurator-ui">
+                        <div class="component-selector">
+                            <label for="cpu-brand">CPU Brand:</label>
+                            <select id="cpu-brand">
+                                <option value="intel">Intel</option>
+                                <option value="amd">AMD</option>
+                            </select>
+                        </div>
+                        <div class="component-selector">
+                            <label for="cpu-model">CPU Model:</label>
+                            <select id="cpu-model">
+                                <option value="i5-12400">Intel Core i5-12400 - 200 CHF</option>
+                                <option value="i7-12700K">Intel Core i7-12700K - 350 CHF</option>
+                                <option value="r5-5600">AMD Ryzen 5 5600 - 180 CHF</option>
+                                <option value="r7-5700X">AMD Ryzen 7 5700X - 270 CHF</option>
+                            </select>
+                        </div>
                     </div>
                 </div>
+                
+                <!-- GPU Section -->
+                <div class="configurator-section">
+                    <h3>GPU</h3>
+                    <div class="configurator-ui">
+                        <div class="component-selector">
+                            <label for="gpu-brand">GPU Brand:</label>
+                            <select id="gpu-brand">
+                                <option value="nvidia">NVIDIA</option>
+                                <option value="amd">AMD</option>
+                            </select>
+                        </div>
+                        <div class="component-selector">
+                            <label for="gpu-model">GPU Model:</label>
+                            <select id="gpu-model">
+                                <option value="rtx-3060">NVIDIA RTX 3060 - 350 CHF</option>
+                                <option value="rtx-4060">NVIDIA RTX 4060 - 500 CHF</option>
+                                <option value="rx-6650xt">AMD RX 6650 XT - 320 CHF</option>
+                                <option value="rx-7900xt">AMD RX 7900 XT - 900 CHF</option>
+                            </select>
+                        </div>
+                        <div class="component-selector">
+                            <label for="multi-gpu">Multiple GPUs:</label>
+                            <select id="multi-gpu">
+                                <option value="single">Single GPU</option>
+                                <option value="dual">Dual GPU</option>
+                                <option value="triple">Triple GPU</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mainboard Section -->
+                <div class="configurator-section">
+                    <h3>Mainboard</h3>
+                    <div class="configurator-ui">
+                        <div class="component-selector">
+                            <label for="motherboard-brand">Motherboard Brand:</label>
+                            <select id="motherboard-brand">
+                                <option value="asus">ASUS</option>
+                                <option value="msi">MSI</option>
+                                <option value="gigabyte">Gigabyte</option>
+                                <option value="asrock">ASRock</option>
+                            </select>
+                        </div>
+                        <div class="component-selector">
+                            <label for="motherboard-model">Motherboard Model:</label>
+                            <select id="motherboard-model">
+                                <option value="asus-b550">ASUS B550 - 150 CHF</option>
+                                <option value="msi-x570">MSI X570 - 200 CHF</option>
+                                <option value="gigabyte-b650">Gigabyte B650 - 180 CHF</option>
+                                <option value="asrock-z690">ASRock Z690 - 220 CHF</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- RAM and Storage Section -->
+                <div class="configurator-section">
+                    <h3>RAM and Storage</h3>
+                    <div class="configurator-ui">
+                        <div class="component-selector">
+                            <label for="ram">RAM:</label>
+                            <select id="ram">
+                                <option value="8gb">8 GB - 40 CHF</option>
+                                <option value="16gb">16 GB - 70 CHF</option>
+                                <option value="32gb">32 GB - 130 CHF</option>
+                                <option value="64gb">64 GB - 250 CHF</option>
+                                <option value="128gb">128 GB - 500 CHF</option>
+                            </select>
+                        </div>
+                        <div class="component-selector">
+                            <label for="storage">Storage:</label>
+                            <select id="storage">
+                                <option value="256gb">256 GB SSD - 50 CHF</option>
+                                <option value="512gb">512 GB SSD - 80 CHF</option>
+                                <option value="1tb">1 TB SSD - 120 CHF</option>
+                                <option value="2tb">2 TB SSD - 200 CHF</option>
+                                <option value="4tb">4 TB SSD - 350 CHF</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Case, Cooling, and PSU Section -->
+                <div class="configurator-section">
+                    <h3>Case, Cooling, and Power Supply</h3>
+                    <div class="configurator-ui">
+                        <div class="component-selector">
+                            <label for="case-brand">Case Brand:</label>
+                            <select id="case-brand">
+                                <option value="nzxt">NZXT</option>
+                                <option value="corsair">Corsair</option>
+                                <option value="coolermaster">Cooler Master</option>
+                                <option value="fractal">Fractal Design</option>
+                            </select>
+                        </div>
+                        <div class="component-selector">
+                            <label for="case-model">Case Model:</label>
+                            <select id="case-model">
+                                <option value="nzxt-h510">NZXT H510 - 90 CHF</option>
+                                <option value="corsair-4000d">Corsair 4000D - 100 CHF</option>
+                                <option value="cm-mb520">Cooler Master MB520 - 85 CHF</option>
+                                <option value="fractal-meshify-c">Fractal Meshify C - 110 CHF</option>
+                            </select>
+                        </div>
+                        <div class="component-selector">
+                            <label for="cooling">Cooling:</label>
+                            <select id="cooling">
+                                <option value="air">Air Cooling - 50 CHF</option>
+                                <option value="liquid">Liquid Cooling - 150 CHF</option>
+                            </select>
+                        </div>
+                        <div class="component-selector">
+                            <label for="psu">Power Supply Unit:</label>
+                            <select id="psu">
+                                <option value="500w">500W - 60 CHF</option>
+                                <option value="750w">750W - 90 CHF</option>
+                                <option value="1000w">1000W - 130 CHF</option>
+                                <option value="1200w">1200W - 180 CHF</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Extras Section -->
+                <div class="configurator-section">
+                    <h3>Extras</h3>
+                    <div class="configurator-ui">
+                        <div class="component-selector">
+                            <label for="rgb">RGB Lighting:</label>
+                            <select id="rgb">
+                                <option value="none">None</option>
+                                <option value="single-color">Single Color - 30 CHF</option>
+                                <option value="multi-color">Multi-Color - 50 CHF</option>
+                                <option value="addressable">Addressable RGB - 80 CHF</option>
+                            </select>
+                        </div>
+                        <div class="component-selector">
+                            <label for="optical-drive">Optical Drive:</label>
+                            <select id="optical-drive">
+                                <option value="none">None</option>
+                                <option value="dvd">DVD Drive - 40 CHF</option>
+                                <option value="blu-ray">Blu-Ray Drive - 100 CHF</option>
+                            </select>
+                        </div>
+                        <div class="component-selector">
+                            <label for="sound-card">Sound Card:</label>
+                            <select id="sound-card">
+                                <option value="none">None</option>
+                                <option value="basic">Basic Sound Card - 30 CHF</option>
+                                <option value="advanced">Advanced Sound Card - 70 CHF</option>
+                            </select>
+                        </div>
+                        <div class="component-selector">
+                            <label for="software">Software Options:</label>
+                            <select id="software" multiple>
+                                <option value="norton">Norton Antivirus - 50 CHF</option>
+                                <option value="microsoft365">Microsoft 365 - 70 CHF</option>
+                                <option value="adobe">Adobe Creative Suite - 300 CHF</option>
+                                <option value="autocad">AutoCAD - 150 CHF</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </section>
     </main>
