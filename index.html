@@ -1,4 +1,8 @@
 <!DOCTYPE html>
+### `index.html`
+
+```html
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -17,38 +21,72 @@
             <li><a href="repair.html">PC & Phone Repair</a></li>
             <li><a href="#">About</a></li>
             <li><a href="#">Contact</a></li>
-            <li><a href="cart.html">Cart (<span id="cart-count">0</span>)</a></li>
         </ul>
     </nav>
-    <div class="user-auth-buttons">
-        <button id="login-button" class="auth-button">Login</button>
-        <button id="register-button" class="auth-button">Register</button>
-        <button id="cart-button" class="cart-button">Cart (<span id="cart-count">0</span>)</button>
-    </div>
     <main>
         <section class="hero">
             <div class="hero-text">
-                <h1>Choose Your Base Model</h1>
-                <p>Select a base model to start customizing your perfect PC.</p>
+                <h1>Build Your Perfect PC</h1>
+                <p>Select components and configure your dream PC with ease.</p>
+                <button class="cta-button">Get Started</button>
             </div>
         </section>
-        <section class="base-models">
+        <section class="configurator">
             <div class="container">
-                <div class="model" onclick="location.href='configurator.html?model=high-end'">
-                    <img src="path/to/high-end-pc.jpg" alt="High-End PC">
-                    <h2>High-End</h2>
-                    <p>Top performance with the latest technology.</p>
+                <h2>PC Configurator</h2>
+                <div class="configurator-ui">
+                    <div class="component-selector">
+                        <label for="cpu">CPU:</label>
+                        <select id="cpu">
+                            <option value="high-end">High-End</option>
+                            <option value="mid-range">Mid-Range</option>
+                            <option value="budget">Budget</option>
+                        </select>
+                    </div>
+                    <div class="component-selector">
+                        <label for="gpu">GPU:</label>
+                        <select id="gpu">
+                            <option value="high-end">High-End</option>
+                            <option value="mid-range">Mid-Range</option>
+                            <option value="budget">Budget</option>
+                        </select>
+                    </div>
+                    <div class="component-selector">
+                        <label for="ram">RAM:</label>
+                        <select id="ram">
+                            <option value="8gb">8 GB</option>
+                            <option value="16gb">16 GB</option>
+                            <option value="32gb">32 GB</option>
+                            <option value="64gb">64 GB</option>
+                            <option value="128gb">128 GB</option>
+                        </select>
+                    </div>
+                    <div class="component-selector">
+                        <label for="storage">Storage:</label>
+                        <select id="storage">
+                            <option value="256gb">256 GB SSD</option>
+                            <option value="512gb">512 GB SSD</option>
+                            <option value="1tb">1 TB SSD</option>
+                            <option value="2tb">2 TB SSD</option>
+                            <option value="4tb">4 TB SSD</option>
+                        </select>
+                    </div>
                 </div>
-                <div class="model" onclick="location.href='configurator.html?model=mid-range'">
-                    <img src="path/to/mid-range-pc.jpg" alt="Mid-Range PC">
-                    <h2>Mid-Range</h2>
-                    <p>Balanced performance for everyday use.</p>
+                <div class="pc-image">
+                    <h3>Preview Your Build</h3>
+                    <div class="image-placeholder">Image of your configured PC will appear here</div>
                 </div>
-                <div class="model" onclick="location.href='configurator.html?model=budget'">
-                    <img src="path/to/budget-pc.jpg" alt="Budget PC">
-                    <h2>Budget</h2>
-                    <p>Affordable and efficient for basic tasks.</p>
+                <div class="configurator-summary">
+                    <h3>Summary</h3>
+                    <ul>
+                        <li><strong>CPU:</strong> High-End</li>
+                        <li><strong>GPU:</strong> High-End</li>
+                        <li><strong>RAM:</strong> 16 GB</li>
+                        <li><strong>Storage:</strong> 1 TB SSD</li>
+                    </ul>
+                    <button class="cta-button">Save Configuration</button>
                 </div>
+                <button class="cta-button" onclick="location.href='configurator.html'">More Advanced Configuration</button>
             </div>
         </section>
     </main>
@@ -57,18 +95,5 @@
             <p>&copy; 2024 PC Assembly and Configuration. All rights reserved.</p>
         </div>
     </footer>
-
-    <script src="auth.js"></script>
-    <script>
-        // Function to update the cart count
-        function updateCartCount() {
-            const cart = JSON.parse(localStorage.getItem('cart')) || [];
-            const cartCount = document.getElementById('cart-count');
-            cartCount.textContent = cart.length;
-        }
-
-        // Call the function to update the cart count on page load
-        updateCartCount();
-    </script>
 </body>
 </html>
