@@ -2,8 +2,8 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #121212;
-    color: #ffffff;
+    background-color: #121212; /* Dark background to match the banner's theme */
+    color: #ffffff; /* Light text color for better readability */
 }
 
 .container {
@@ -17,26 +17,26 @@ body {
 
 header {
     width: 100%;
-    height: 250px;
+    height: 250px; /* Adjust height to match the image */
     position: relative;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Add shadow for better depth */
+    overflow: hidden; /* Ensure any overflow is hidden */
 }
 
 .banner {
     background: url('banner.jpg') no-repeat center center;
-    background-size: 100% auto;
+    background-size: 100% auto; /* Adjust to fit the width while maintaining aspect ratio */
     height: 100%;
-    width: 100%;
+    width: 100%; /* Make sure the banner spans the full width */
     position: relative;
 }
 
 .navbar {
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.85);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-    padding: 20px 0;
-    position: relative;
+    background-color: rgba(0, 0, 0, 0.85); /* Slightly darker for better visibility */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Add shadow for better depth */
+    padding: 20px 0; /* Add padding to navbar */
+    position: relative; /* Ensure navbar is below the header */
     z-index: 1000;
 }
 
@@ -44,46 +44,46 @@ nav ul {
     list-style: none;
     display: flex;
     margin: 0;
-    padding: 0;
+    padding: 0; /* Remove extra padding */
     justify-content: center;
 }
 
 nav ul li {
-    margin: 0 20px;
+    margin: 0 20px; /* Increase spacing between menu items */
 }
 
 nav ul li a {
-    color: #ffffff;
+    color: #ffffff; /* White text color */
     text-decoration: none;
     font-weight: bold;
-    padding: 15px 20px;
+    padding: 15px 20px; /* Increased padding for better spacing */
     border-radius: 5px;
-    font-size: 1.1em;
-    transition: background 0.3s, transform 0.3s;
+    font-size: 1.1em; /* Increase font size for better visibility */
+    transition: background 0.3s, transform 0.3s; /* Smooth transition effects */
 }
 
 nav ul li a:hover {
-    background-color: rgba(255, 255, 255, 0.2);
-    transform: scale(1.1);
+    background-color: rgba(255, 255, 255, 0.2); /* Light hover effect */
+    transform: scale(1.1); /* Slight scale on hover */
 }
 
 main {
-    padding-top: 60px;
+    padding-top: 60px; /* Increase padding-top to create more space below the navbar */
 }
 
 .hero {
-    background: #121212;
+    background: #121212; /* Match background to remove darker space */
     color: white;
     text-align: center;
-    padding: 25px 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    padding: 25px 20px; /* Adjusted padding */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Add shadow for better depth */
 }
 
 .hero-text h1 {
     font-size: 3em;
     margin: 0;
-    padding-top: 5px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    padding-top: 5px; /* Move text down by 5px */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Text shadow for better readability */
 }
 
 .hero-text p {
@@ -100,7 +100,7 @@ main {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s, transform 0.3s;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for better depth */
 }
 
 .cta-button:hover {
@@ -189,4 +189,67 @@ main {
 
 .model p {
     color: #aaaaaa;
+}
+
+/* Notification styling */
+.notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    animation: fadeIn 0.5s, fadeOut 0.5s 2.5s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+}
+
+/* Media query for tablets */
+@media (max-width: 768px) {
+    .model {
+        width: 80%;
+    }
+}
+
+/* Media query for mobile devices */
+@media (max-width: 480px) {
+    .model {
+        width: 100%;
+    }
+
+    .hero-text h1 {
+        font-size: 2em;
+    }
+
+    .hero-text p {
+        font-size: 1.2em;
+    }
+
+    .cta-button {
+        padding: 10px 20px;
+        font-size: 1em;
+    }
 }
