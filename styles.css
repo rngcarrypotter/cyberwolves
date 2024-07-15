@@ -72,18 +72,19 @@ main {
     background: #121212;
     color: white;
     text-align: center;
-    padding: 80px 20px;
+    padding: 60px 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    min-height: 50vh;
+    min-height: 60vh;
 }
 
 .hero-text h1 {
     font-size: 3em;
     margin: 0;
+    padding-top: 20px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
@@ -109,28 +110,8 @@ main {
     transform: scale(1.05);
 }
 
-.video-section {
-    background-color: #1e1e1e;
-    padding: 40px 20px;
-    text-align: center;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-    margin-top: 20px;
-}
-
-.video-section h2 {
-    font-size: 2em;
-    margin-top: 0;
-    margin-bottom: 20px;
-    text-align: center;
-    border-bottom: 2px solid #ffffff;
-    display: inline-block;
-    padding-bottom: 10px;
-}
-
 .video-container {
-    display: flex;
-    justify-content: center;
+    margin-top: 20px;
 }
 
 .base-models {
@@ -237,7 +218,7 @@ footer p {
         font-size: 1em;
     }
 
-    .video-section h2, .base-models h2 {
+    .base-models h2 {
         font-size: 1.5em;
     }
 
@@ -270,7 +251,7 @@ footer p {
         font-size: 1em;
     }
 
-    .video-section h2, .base-models h2 {
+    .base-models h2 {
         font-size: 1.2em;
     }
 
