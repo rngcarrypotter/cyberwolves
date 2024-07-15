@@ -69,11 +69,15 @@ main {
 }
 
 .hero {
-    background: #2e2e2e;
+    background: #121212;
     color: white;
     text-align: center;
-    padding: 25px 20px;
+    padding: 100px 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .hero-text h1 {
@@ -106,7 +110,7 @@ main {
 }
 
 .base-models {
-    background-color: #1e1e1e;
+    background-color: #2e2e2e;
     padding: 40px 20px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
