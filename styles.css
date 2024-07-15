@@ -68,69 +68,79 @@ main {
     padding-top: 60px;
 }
 
-.configurator {
+.hero {
+    background: #2e2e2e;
+    color: white;
+    text-align: center;
+    padding: 25px 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.hero-text h1 {
+    font-size: 3em;
+    margin: 0;
+    padding-top: 5px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.hero-text p {
+    font-size: 1.5em;
+    margin: 10px 0 20px;
+}
+
+.cta-button {
+    padding: 15px 30px;
+    font-size: 1.2em;
+    color: #333;
+    background-color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.cta-button:hover {
+    background-color: #f0f0f0;
+    transform: scale(1.05);
+}
+
+.base-models {
     background-color: #1e1e1e;
-    padding: 60px 20px;
+    padding: 40px 20px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
     margin-top: 20px;
     text-align: center;
-    min-height: 100vh;
 }
 
-.configurator h2 {
-    font-size: 2.5em;
+.base-models h2 {
+    font-size: 2em;
     margin-top: 0;
     text-align: center;
     border-bottom: 2px solid #ffffff;
     display: inline-block;
     padding-bottom: 10px;
-    margin-bottom: 40px;
-}
-
-.configurator-section {
-    margin-bottom: 40px;
-}
-
-.configurator-section h3 {
-    font-size: 2em;
     margin-bottom: 20px;
+}
+
+.model-options {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.model {
+    margin: 20px;
     text-align: center;
 }
 
-.configurator-ui {
-    margin-top: 20px;
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 20px;
-}
-
-.component-selector {
-    display: flex;
-    flex-direction: column;
-    background-color: #2e2e2e;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-}
-
-.component-selector.full-width {
+.model img {
     width: 100%;
-}
-
-.component-selector label {
-    margin-bottom: 10px;
-    font-weight: bold;
-    color: #ffffff;
-}
-
-.component-selector select {
-    padding: 15px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 1.1em;
-    color: #333;
-    background-color: #ffffff;
+    height: auto;
+    max-width: 300px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
 
 footer {
