@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="styles.css">
     <script>
         function scrollToConfigurator() {
-            document.getElementById('base-models').scrollIntoView({ behavior: 'smooth' });
+            location.href = 'configurator.html';
         }
     </script>
 </head>
@@ -40,15 +40,27 @@
                 <h2>What Our Customers Say</h2>
                 <div class="review-list">
                     <div class="review">
+                        <img src="customer1.jpg" alt="Customer 1" class="review-img">
                         <p>"Amazing service! My PC runs like a dream!"</p>
+                        <div class="stars">
+                            ★★★★★
+                        </div>
                         <span>- Alex R.</span>
                     </div>
                     <div class="review">
+                        <img src="customer2.jpg" alt="Customer 2" class="review-img">
                         <p>"Great experience, I built my custom PC with ease."</p>
+                        <div class="stars">
+                            ★★★★★
+                        </div>
                         <span>- Maria L.</span>
                     </div>
                     <div class="review">
+                        <img src="customer3.jpg" alt="Customer 3" class="review-img">
                         <p>"Highly recommend! Fantastic customer support."</p>
+                        <div class="stars">
+                            ★★★★★
+                        </div>
                         <span>- John D.</span>
                     </div>
                 </div>
@@ -69,25 +81,6 @@
                     <div class="feature">
                         <h3>Expert Support</h3>
                         <p>Get help from our experienced support team.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section id="base-models" class="base-models">
-            <div class="container">
-                <h2>Choose Your Base Model</h2>
-                <div class="model-options">
-                    <div class="model">
-                        <img src="high-end.jpg" alt="High-End Model">
-                        <button class="cta-button" onclick="location.href='configurator.html?model=high-end'">High-End</button>
-                    </div>
-                    <div class="model">
-                        <img src="midrange.jpg" alt="Mid-Range Model">
-                        <button class="cta-button" onclick="location.href='configurator.html?model=mid-range'">Mid-Range</button>
-                    </div>
-                    <div class="model">
-                        <img src="budget.jpg" alt="Budget Model">
-                        <button class="cta-button" onclick="location.href='configurator.html?model=budget'">Budget</button>
                     </div>
                 </div>
             </div>
